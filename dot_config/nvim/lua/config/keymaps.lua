@@ -3,7 +3,16 @@
 -- Add any additional keymaps here
 
 local neogit = require("neogit")
+local gitsigns = require("gitsigns")
 
 vim.keymap.set("n", "<leader>G", function()
   neogit.open()
 end, { desc = "Neo[G]it" })
+
+vim.keymap.set("n", "<leader>gB", function()
+  gitsigns.blame()
+end, { desc = "[G]it [B]lame" })
+
+vim.keymap.set({ "n", "x" }, "<leader>go", function()
+  Snacks.gitbrowse()
+end, { desc = "[G]it Browse ([O]pen)" })
