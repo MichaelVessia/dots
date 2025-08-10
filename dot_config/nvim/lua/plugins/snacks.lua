@@ -5,7 +5,7 @@ return {
       formatters = {
         file = {
           -- Show full file paths without truncation
-          truncate = nil, -- Don't truncate paths (no more src/.../Button.tsx)
+          truncate = 200, -- Allow very long paths (no more docs/.../file.md)
           filename_first = false, -- Show path before filename
           filename_only = false, -- Show full path, not just filename
         },
